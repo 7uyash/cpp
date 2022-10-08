@@ -1,5 +1,12 @@
 #include <iostream>
 using namespace std;
+int checkdiv(int a, int b)
+{
+    if(b==0)
+        cout<<"Divide by zero error!!! EXITING";
+    else
+        return a/b;
+}
 int main ()
 {
     int num1,num2;
@@ -18,7 +25,7 @@ int main ()
     }else if (op == '*'){
         result = num1 * num2;
     }else if (op == '/'){
-        result = num1 / num2;
+        result = checkdiv(num1,num2);
     } else{ cout <<"Invalid Operator";
     }
     cout << "Result : " << result;
